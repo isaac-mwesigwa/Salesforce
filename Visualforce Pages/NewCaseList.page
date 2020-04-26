@@ -1,0 +1,30 @@
+/*
+Create a Visualforce page displaying new cases
+Create a Visualforce page that uses a custom controller to display a list of cases with the status of 'New'. 
+    Challenge Requirements
+    •	The page must be named NewCaseList
+    •	The custom controller Apex class must be named NewCaseListController and include the following: 
+        o	A publicly scoped method named getNewCases 
+        o	Use the return type of List<Case> 
+        o	Return a list of case records that includes the ID and CaseNumber fields 
+        o	Filter the results returned to only have a status of New
+    •	The NewCaseList Visualforce page must use an apex:repeat component, which is: 
+        o	Bound to newCases 
+        o	Refers to the var attribute as case 
+        o	With the component tags, bind an apex:outputLink component to the ID of the case. 
+            This will cause the  page to direct the user to the detail page of the respective case record.
+*/
+<apex:page controller="NewCaseListController">
+    <apex:form >
+
+        <apex:pageBlock title="New Case List" id="cases_list">
+
+            <apex:repeat value="{!newCases}" var="case" id="case">
+                <p><apex:outputLink value="/{!case.Id}">{!case.CaseNumber}</apex:outputLink></p>
+            </apex:repeat>
+            
+        </apex:pageBlock>
+
+    </apex:form>
+
+</apex:page>

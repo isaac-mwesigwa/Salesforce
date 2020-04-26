@@ -1,0 +1,14 @@
+/*
+Create a Visualforce page that shows user information.
+Create a Visualforce page that displays the first name of the logged-in user. 
+Challenge Requirements
+    •	The page must be named DisplayUserInfo
+    •	The displayed user information must be generated dynamically from the logged-in user
+*/
+<apex:page >
+    <apex:pageBlock title="DisplayUserInfo">
+      <apex:pageBlockSection >
+      {!$User.FirstName} 
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

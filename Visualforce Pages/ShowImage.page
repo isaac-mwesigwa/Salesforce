@@ -1,0 +1,13 @@
+/*
+Use a static resource to display an image on a Visualforce Page
+Upload a specified zip file as a static resource. The zip will have directories with images and you have to display a specific image on a Visualforce page. 
+    Challenge Requirements
+    •	The page must be named ShowImage
+    •	This file must be uploaded as a Static Resource named vfimagetest
+    •	The page must have a Visualforce apex:image tag that displays the 
+        kitten1.jpg image from the cats directory of the static resource
+*/
+<apex:page >
+    <apex:image alt="cats" title="Cats"
+        url="{!URLFOR($Resource.vfimagetest, 'cats/kitten1.jpg')}" />
+</apex:page>

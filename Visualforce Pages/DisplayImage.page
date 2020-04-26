@@ -1,0 +1,12 @@
+/*
+Create a Visualforce page without the standard Salesforce header and display an image using 
+the Visualforce image component. 
+Challenge Requirements
+    •	The page must be named DisplayImage
+    •	It must NOT display the standard Salesforce header
+    •	It must use a Visualforce apex:image component to display this image 
+        - https://developer.salesforce.com/files/salesforce-developer-network-logo.png
+*/
+<apex:page sidebar="false" showHeader="false">
+    <apex:image value="https://developer.salesforce.com/files/salesforce-developer-network-logo.png"/>
+</apex:page>
